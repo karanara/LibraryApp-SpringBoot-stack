@@ -51,6 +51,8 @@ public class BookService {
 
 	}
 	public int currentLoansBooks(String userEmail) {
+		System.out.println(checkoutRepository.findBooksByUserEmail(userEmail));
+
 		return checkoutRepository.findBooksByUserEmail(userEmail).size();
 	}
 }
